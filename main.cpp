@@ -21,29 +21,29 @@ int main() {
 		cout << arr3[i] << " ";
 	}
 	cout << endl;
-	int index = 0;
+	int k = 0;
 	for (int i = 0; i < size2; i++) {
 		if (arr2[i] > 0) {
-			arr1[index++] = arr2[i];
+			arr1[k++] = arr2[i];
 		}
 		if (arr3[i] > 0) {
-			arr1[index++] = arr3[i];
+			arr1[k++] = arr3[i];
 		}
 	}
 	for (int i = 0; i < size2; i++) {
 		if (arr2[i] == 0) {
-			arr1[index++] = arr2[i];
+			arr1[k++] = arr2[i];
 		}
 		if (arr3[i] == 0) {
-			arr1[index++] = arr3[i];
+			arr1[k++] = arr3[i];
 		}
 	}
 	for (int i = 0; i < size2; i++) {
 		if (arr2[i] < 0) {
-			arr1[index++] = arr2[i];
+			arr1[k++] = arr2[i];
 		}
 		if (arr3[i] < 0) {
-			arr1[index++] = arr3[i];
+			arr1[k++] = arr3[i];
 		}
 	}
 	for (int i = 0; i < size1; i++) {
