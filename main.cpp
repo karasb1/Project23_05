@@ -5,50 +5,45 @@ using namespace std;
 int main()
 {
     srand(time(0));
-    int arr1[10];
-    int arr2[5];
-    int arr3[5];
-    int k = 0;
-    for (int i = 0; i < 10; i++)
+    const int FULL_SIZE = 15;
+    int arr1[FULL_SIZE];
+    int arr2[FULL_SIZE];
+    int arr3[FULL_SIZE];
+    int size;
+    do
     {
-        arr1[i] = rand() % 20 ;
+        cout << "Enter the size of the array(1-15): ";
+        cin >> size;
+    } while (size > FULL_SIZE || size <= 0);
+    for (int i = 0; i < size; i++)
+    {
+        arr1[i] = rand() % 20 - 10;
+        arr2[i] = rand() % 20 - 10;
     }
     do
     {
         cout << "Array1: ";
-        for (size_t i = 0; i < 10; i++)
+        for (size_t i = 0; i < size; i++)
         {
             cout << arr1[i] << " ";
         }
         cout << endl;
         cout << "Array2: ";
-        for (size_t i = 0; i < 10; i++)
-        {
-            if (i % 2 == 0) {
-                arr2[k] = arr1[i];
-                k++;
-            }
-        }
-        for (size_t i = 0; i < 5; i++)
+        for (size_t i = 0; i < size; i++)
         {
             cout << arr2[i] << " ";
         }
-        k = 0;
         cout << endl;
         cout << "Array3: ";
-        for (size_t i = 0; i < 10; i++)
+        for (size_t i = 0; i < size; i++)
         {
-            if (i % 2 != 0) {
-                arr3[k] = arr1[i];
-                k++;
-            }
+            arr3[i] = arr1[i] + arr2[i];
         }
-        for (size_t i = 0; i < 5; i++)
+        for (size_t i = 0; i < size; i++)
         {
             cout << arr3[i] << " ";
         }
         cout << endl;
-
 
         break;
     } while (true);
